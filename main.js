@@ -1,3 +1,4 @@
+const APIaddress = `https://moviesmern.herokuapp.com/movies/`
 async function addMovie() {
     const data = {
         movie: {
@@ -9,7 +10,7 @@ async function addMovie() {
         }
     }
     try {
-        await fetch("https://moviesmern.herokuapp.com/movies/saveMovie",
+        await fetch(`${APIaddress}saveMovie`,
             {
                 method: "POST",
                 body: JSON.stringify(data),
@@ -22,18 +23,9 @@ async function addMovie() {
     }
 } 
 
-
-
-
-
-
-
-
-
-
 async function getMovieName() {
     try {
-        return await fetch(`https://moviesmern.herokuapp.com/movies/movie/searchByName/${searchMovie.value}`)
+        return await fetch(`${APIaddress}movie/searchByName`)
             .then((response) =>
                 response.json())
     } catch (error) {
@@ -46,6 +38,20 @@ function printMovieName() {
                 moviesList.innerHTML += `${item.movieName} ` + "<br>" + `<img src =${item.image}/>`
             });
         })
+}
+printMovieName()
+
+
+async function deletMovie(movieId) {
+    try {
+        return await fetch(`${APIaddress}movie/${movieId}`,{method:`DELETE`})
+        .then(res => res.json())
+    } catch (error) {
+        
+    }    
+    finally{
+
+    }
 }
 
 
