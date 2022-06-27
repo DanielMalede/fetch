@@ -1,0 +1,16 @@
+#myDiv{
+    display: flex;
+    width: 30vw;
+    padding: 4vh;
+    flex-direction: column;
+    background-image: linear-gradient(rgb(224, 224, 224),rgb(0, 149, 255),rgb(0, 72, 255),rgb(5, 5, 71));
+
+}
+input{
+    margin-top: 2vh;
+    text-align: center;
+    border-color: rgb(49, 7, 134);
+}
+h2{
+    text-align: center;
+}

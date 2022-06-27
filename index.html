@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="myDiv">
+        <h2>Add movie to Jacob Site</h2>
+        <span id="span_line"></span>
+        <br>
+        <input type="text" id="imageInput" placeholder="enter the url image movie">
+        <br>
+        <input type="text" id="linkToMovieInput" placeholder="enter link to watch the movie">
+        <br>
+        <input type="text" id="movieNameInput" placeholder="enter movie name">
+        <br>
+        <input type="number" id="ratingInput" min="0" max="10" placeholder="enter your rating movie">
+        <br>
+        <input type="text" id="synopsisInput" placeholder=" enter synopsis movie">
+        <br>
+        <input type="search" id="searchMovie">
+        <br>
+        <button id="searchmovieBTN" onclick="printMovieName()"> search movie</button>
+        <!-- <button id="BTN" type="submit"> click me to send movie</button> -->
+        <button onclick="printMovieName()">show movies list</button>
+    </div>
+    <h3 id="moviesList"></h3>
+    <script src="main.js"></script>
+</body>
+
+</html>
