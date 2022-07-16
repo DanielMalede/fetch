@@ -31,15 +31,16 @@ async function getMovieName() {
     } catch (error) {
     }
 }
-function printMovieName() {
-    getMovieName()
-        .then((result) => {
-            result.data.forEach(item => {
-                moviesList.innerHTML += `${item.movieName} ` + "<br>" + `<img src =${item.image}/>`
-            });
-        })
-}
-printMovieName()
+console.log(getMovieName());
+// function printMovieName() {
+//     getMovieName()
+//         .then((result) => {
+//             result.data.forEach(item => {
+//                 moviesList.iAnnerHTML += `${item.movieName} ` + "<br>" + `<img src =${item.image}/>`
+//             });
+//         })
+// }
+// printMovieName()
 
 
 async function deletMovie(movieId) {
