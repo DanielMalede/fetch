@@ -23,6 +23,7 @@ async function addMovie() {
     }
 } 
 
+
 async function getMovieName() {
     try {
         return await fetch(`${APIaddress}movie/searchByName`)
